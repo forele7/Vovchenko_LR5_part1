@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
     int A = 0, B = 0;
-    
+
     Enter_Number(A, "Input height A: ");
     Enter_Number(B, "Input width B: ");
 
