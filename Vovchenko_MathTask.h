@@ -14,29 +14,6 @@
 
 using namespace std;
 
-// bool Input (string input)
-// {
-//     if (input.empty()) 
-//     {
-//         return false;
-//     }
-    
-//     try
-//     {
-//         int number = stoi(input);
-//         if (number < 0)
-//         {
-//             return false;
-//         }
-//     }
-
-//     catch (...)
-//     {
-//         return false;
-//     }
-//     return true;
-// }
-
 bool Input (string input) 
 {
     if (input.empty()) 
