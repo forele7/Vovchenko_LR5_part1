@@ -9,29 +9,64 @@
 #include <numeric>
 #include <functional>
 #include <string>
+#include <algorithm>
+#include <cctype>
 
 using namespace std;
 
-bool Input (string input)
+// bool Input (string input)
+// {
+//     if (input.empty()) 
+//     {
+//         return false;
+//     }
+    
+//     try
+//     {
+//         int number = stoi(input);
+//         if (number < 0)
+//         {
+//             return false;
+//         }
+//     }
+
+//     catch (...)
+//     {
+//         return false;
+//     }
+//     return true;
+// }
+
+bool Input (string input) 
 {
     if (input.empty()) 
     {
         return false;
     }
-    try
+    
+    for (char c : input) 
+    {
+        if (!isdigit(c)) 
+        {
+            return false;
+        }
+    }
+    
+    try 
     {
         int number = stoi(input);
-        // if (number < 0)
-        // {
-        //     return false;
-        // }
-    }
-    catch (...)
+        if (number < 0) 
+        {
+            return false;
+        }
+    } 
+    catch (...) 
     {
         return false;
     }
     return true;
 }
+
 
 void Enter_Number(int& varLink, string label)
 {
